@@ -1,0 +1,47 @@
+{
+  "name": "@iaminfinity/nodemailer",
+  "version": "0.1.1",
+  "description": "Nest - modern, fast, powerful node.js web framework (@nodemailer)",
+  "author": "Fahim Rahman",
+  "license": "MIT",
+  "scripts": {
+    "build": "rm -rf dist && tsc -p tsconfig.json",
+    "precommit": "lint-staged",
+    "prepublish:npm": "npm run build",
+    "publish:npm": "npm publish --access public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ifaim/nestjs-nodemailer"
+  },
+  "peerDependencies": {
+    "@nestjs/common": "^5.0.0"
+  },
+  "devDependencies": {
+    "@nestjs/common": "^5.3.2",
+    "@types/node": "^7.0.41",
+    "husky": "^0.14.3",
+    "lint-staged": "^7.0.0",
+    "prettier": "^1.11.1",
+    "typescript": "^2.4.2"
+  },
+  "lint-staged": {
+    "*.ts": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "@types/nodemailer": "^4.6.2",
+    "nodemailer": "^4.6.8"
+  },
+  "keywords": [
+    "nodemailer",
+    "nestjs",
+    "mailer",
+    "mail"
+  ],
+  "engines": {
+    "node": ">=4.2.4"
+  }
+}
