@@ -1,6 +1,6 @@
 {
   "name": "@iaminfinity/nodemailer",
-  "version": "0.1.3",
+  "version": "0.1.4-0",
   "description": "Nest - modern, fast, powerful node.js web framework (@nodemailer)",
   "author": "Fahim Rahman",
   "license": "MIT",
