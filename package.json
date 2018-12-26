@@ -6,7 +6,6 @@
   "license": "MIT",
   "scripts": {
     "build": "rm -rf dist && tsc -p tsconfig.json",
-    "precommit": "lint-staged",
     "prepublish:npm": "npm run build",
     "publish:npm": " npm publish --access public",
     "prepublish:next": "npm run build",
@@ -30,23 +29,25 @@
     "reflect-metadata": "^0.1.12",
     "typescript": "^3.2.2"
   },
+  "dependencies": {
+    "@types/nodemailer": "^4.6.5",
+    "nodemailer": "^4.7.0"
+  },
   "lint-staged": {
     "*.ts": [
       "prettier --write",
       "git add"
     ]
   },
-  "dependencies": {
-    "@types/nodemailer": "^4.6.5",
-    "nodemailer": "^4.7.0"
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "keywords": [
     "nodemailer",
     "nestjs",
     "mailer",
     "mail"
-  ],
-  "engines": {
-    "node": ">=4.2.4"
-  }
+  ]
 }
